@@ -1706,6 +1706,11 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 480px) {
+  .hero-headline {
+    font-size: clamp(1.1rem, 7vw, 2rem);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
   .hero-trust-row { display: grid; grid-template-columns: repeat(2, 1fr); }
   .worries-grid { grid-template-columns: 1fr; }
   .price-cards { grid-template-columns: 1fr; }
