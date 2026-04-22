@@ -5,15 +5,9 @@
 (function () {
   'use strict';
 
-  /* ===== STICKY HEADER ===== */
+  /* ===== STICKY HEADER (Always Visible) ===== */
   const header = document.getElementById('stickyHeader');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-      header.classList.add('visible');
-    } else {
-      header.classList.remove('visible');
-    }
-  }, { passive: true });
+  // Scroll visibility logic removed as per request to keep it always out
 
   /* ===== HAMBURGER MENU ===== */
   const hamburgerBtn = document.getElementById('hamburgerBtn');
