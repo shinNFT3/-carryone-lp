@@ -75,8 +75,11 @@ img { max-width: 100%; display: block; }
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid var(--orange);
+  transform: translateY(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* Sticky header is now always visible */
+.sticky-header.visible { transform: translateY(0); }
+/* Sticky header: Default is hidden on PC, visible on Mobile (handled in MQ) */
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -136,11 +139,12 @@ img { max-width: 100%; display: block; }
   background: #fff;
   color: var(--orange-dark);
   border: 1.5px solid var(--orange-dark);
-  padding: 9px 20px;
+  padding: 9px 18px;
   border-radius: 100px;
   font-size: 0.85rem;
   font-weight: 700;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 .btn-estimate-header:hover { background: var(--orange-light); color: var(--orange-dark); border-color: var(--orange); }
 
@@ -169,10 +173,11 @@ img { max-width: 100%; display: block; }
 @media (min-width: 992px) {
   .header-nav-pc {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     align-items: center;
     margin-left: auto;
-    margin-right: 32px;
+    margin-right: 20px;
+    white-space: nowrap;
   }
   .header-nav-pc a {
     color: var(--gray-800);
@@ -279,6 +284,9 @@ img { max-width: 100%; display: block; }
   .call-info { display: none; } 
   .btn-call-header { padding: 8px; border-radius: 50%; } 
   .btn-estimate-header { font-size: 0.75rem; padding: 7px 12px; }
+  
+  /* スマホ：JSのクラスに関わらず常時表示されるように強制 */
+  .sticky-header { transform: translateY(0) !important; }
   
   /* スマホ：ヘッダーにリボンを完全に密着させる */
   .hero-content { margin-top: 36px; padding-top: 0; }

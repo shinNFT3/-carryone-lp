@@ -5,9 +5,18 @@
 (function () {
   'use strict';
 
-  /* ===== STICKY HEADER (Always Visible) ===== */
+  /* ===== STICKY HEADER (Scroll Visibility) ===== */
   const header = document.getElementById('stickyHeader');
-  // Scroll visibility logic removed as per request to keep it always out
+  if (header) {
+    window.addEventListener('scroll', () => {
+      // Show header after 80px scroll
+      if (window.scrollY > 80) {
+        header.classList.add('visible');
+      } else {
+        header.classList.remove('visible');
+      }
+    }, { passive: true });
+  }
 
   /* ===== HAMBURGER MENU ===== */
   const hamburgerBtn = document.getElementById('hamburgerBtn');
