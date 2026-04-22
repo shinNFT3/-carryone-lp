@@ -79,16 +79,18 @@ img { max-width: 100%; display: block; }
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sticky-header.visible { transform: translateY(0); }
-/* Sticky header: Default is hidden on PC, visible on Mobile (handled in MQ) */
+
 .header-inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2px 20px;
+  padding: 4px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
+
+/* Logo */
 .header-logo {
   display: flex;
   align-items: center;
@@ -113,6 +115,7 @@ img { max-width: 100%; display: block; }
 .logo-main {
   display: flex;
   align-items: baseline;
+  gap: 2px;
 }
 .logo-carry {
   font-family: 'Oswald', sans-serif;
@@ -131,8 +134,10 @@ img { max-width: 100%; display: block; }
 .logo-sub {
   font-size: 0.6rem;
   color: var(--gray-600);
-  margin-top: 1px;
+  font-weight: 700;
 }
+
+/* Header Actions */
 .header-actions {
   display: flex;
   align-items: flex-start;
@@ -143,20 +148,20 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 62px;
+  width: 64px;
+  text-decoration: none;
   transition: all 0.2s;
-  text-align: center;
 }
 .btn-icon-circle {
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 50% !important;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  margin-bottom: 4px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 3px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: all 0.3s;
 }
 .btn-line-header .btn-icon-circle { background: #06C755; }
@@ -166,18 +171,33 @@ img { max-width: 100%; display: block; }
 .btn-icon-circle svg { width: 22px; height: 22px; }
 
 .btn-text {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 900;
   color: var(--gray-800);
   white-space: nowrap;
   line-height: 1.2;
 }
+
 .btn-line-header:hover .btn-icon-circle, 
 .btn-mail-header:hover .btn-icon-circle, 
 .btn-call-header:hover .btn-icon-circle {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
+
+.btn-estimate-header {
+  background: #fff;
+  color: var(--orange-dark);
+  border: 1.5px solid var(--orange-dark);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: all 0.3s;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+.btn-estimate-header:hover { background: var(--orange-light); color: var(--orange-dark); border-color: var(--orange); }
 
 
 /* PC Navigation */
@@ -292,24 +312,20 @@ img { max-width: 100%; display: block; }
 
 /* Mobile Header Adjustment */
 @media (max-width: 600px) {
-  .header-inner { padding: 4px 8px; gap: 4px; }
-  .logo-prefix { font-size: 0.55rem; padding: 2px 6px; }
-  .logo-carry, .logo-one { font-size: 0.9rem; }
+  .header-inner { padding: 4px 10px; gap: 6px; }
+  .logo-prefix { font-size: 0.55rem; padding: 2px 5px; }
+  .logo-carry, .logo-one { font-size: 1.0rem; }
   .logo-sub { display: none; }
   
-  .header-actions { gap: 4px; }
-  .btn-line-header, .btn-mail-header, .btn-call-header { width: 44px; }
+  .header-actions { gap: 6px; }
+  .btn-line-header, .btn-mail-header, .btn-call-header { width: 48px; }
   .btn-icon-circle { width: 34px; height: 34px; margin-bottom: 2px; }
   .btn-icon-circle svg { width: 18px; height: 18px; }
-  .btn-text { font-size: 0.5rem; font-weight: 900; }
+  .btn-text { font-size: 0.52rem; font-weight: 900; }
   
-  .btn-estimate-header { display: none; } 
+  .btn-estimate-header { display: none; }
   
-  /* スマホ：JSのクラスに関わらず常時表示されるように強制 */
   .sticky-header { transform: translateY(0) !important; }
-  
-  /* スマホ：ヘッダーにリボンを完全に密着させる */
-  .hero-content { margin-top: 36px; padding-top: 0; }
 }
 
 /* ===== HERO SECTION ===== */
@@ -1823,9 +1839,6 @@ img { max-width: 100%; display: block; }
   .flow-step { max-width: 100%; width: 100%; }
   .contact-form-wrap { padding: 28px 20px; }
   .worries-grid { grid-template-columns: repeat(2, 1fr); }
-  .header-actions { gap: 6px; }
-  .btn-call-header .call-number { font-size: 0.9rem; }
-  .btn-estimate-header { display: none; }
   .reason-card { flex-wrap: wrap; }
   .voice-google { flex-wrap: wrap; justify-content: center; text-align: center; }
 
