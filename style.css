@@ -92,27 +92,42 @@ img { max-width: 100%; display: block; }
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   flex-shrink: 0;
+}
+.logo-prefix {
+  font-size: 0.6rem;
+  font-weight: 900;
+  color: #fff;
+  background: var(--orange);
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  margin-top: -2px;
+}
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
 .logo-carry {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--gray-800);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 .logo-one {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--orange);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 .logo-sub {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--gray-600);
-  margin-top: 2px;
+  margin-top: 1px;
 }
 .header-actions {
   display: flex;
@@ -122,26 +137,26 @@ img { max-width: 100%; display: block; }
 .btn-call-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: linear-gradient(135deg, var(--orange), var(--orange-dark));
   color: #fff;
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 100px;
   font-weight: 700;
   transition: all 0.3s;
 }
-.btn-call-header svg { width: 18px; height: 18px; flex-shrink: 0; }
-.call-info { display: flex; flex-direction: column; line-height: 1.2; }
-.call-free { font-size: 0.65rem; opacity: 0.85; }
-.call-number { font-size: 1rem; letter-spacing: 0.04em; }
+.btn-call-header svg { width: 16px; height: 16px; flex-shrink: 0; }
+.call-info { display: flex; flex-direction: column; line-height: 1.1; }
+.call-free { font-size: 0.6rem; opacity: 0.9; }
+.call-number { font-size: 0.95rem; letter-spacing: 0.02em; }
 .btn-call-header:hover { transform: scale(1.05); box-shadow: 0 4px 18px rgba(249,115,22,0.45); }
 .btn-estimate-header {
   background: #fff;
   color: var(--orange-dark);
   border: 1.5px solid var(--orange-dark);
-  padding: 9px 18px;
+  padding: 8px 16px;
   border-radius: 100px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   transition: all 0.3s;
   white-space: nowrap;
@@ -153,17 +168,19 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  padding: 0 14px;
+  height: 38px;
+  border-radius: 100px;
   color: #fff;
   transition: all 0.3s;
   flex-shrink: 0;
+  gap: 6px;
 }
 .btn-line-header { background: #06C755; }
 .btn-mail-header { background: var(--navy); }
-.btn-line-header svg, .btn-mail-header svg { width: 22px; height: 22px; }
-.btn-line-header:hover, .btn-mail-header:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.btn-line-header svg, .btn-mail-header svg { width: 18px; height: 18px; }
+.btn-text { font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+.btn-line-header:hover, .btn-mail-header:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
 
 /* PC Navigation */
@@ -278,12 +295,16 @@ img { max-width: 100%; display: block; }
 
 /* Mobile Header Adjustment */
 @media (max-width: 600px) {
-  .header-inner { padding: 2px 16px; gap: 8px; }
-  .logo-carry, .logo-one { font-size: 1rem; }
+  .header-inner { padding: 4px 12px; gap: 6px; }
+  .logo-prefix { font-size: 0.5rem; padding: 1px 4px; margin-right: 0; }
+  .logo-carry, .logo-one { font-size: 0.95rem; }
   .logo-sub { display: none; }
+  .btn-text { display: none; }
+  .btn-line-header, .btn-mail-header { padding: 8px; width: 36px; height: 36px; border-radius: 50%; }
+  .btn-line-header svg, .btn-mail-header svg { margin: 0; }
   .call-info { display: none; } 
-  .btn-call-header { padding: 8px; border-radius: 50%; } 
-  .btn-estimate-header { font-size: 0.75rem; padding: 7px 12px; }
+  .btn-call-header { padding: 9px; width: 36px; height: 36px; border-radius: 50%; justify-content: center; } 
+  .btn-estimate-header { font-size: 0.7rem; padding: 6px 10px; }
   
   /* スマホ：JSのクラスに関わらず常時表示されるように強制 */
   .sticky-header { transform: translateY(0) !important; }
