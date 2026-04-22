@@ -719,14 +719,14 @@ img { max-width: 100%; display: block; }
   background: var(--orange-stripe);
   color: #fff;
   display: inline-block;
-  padding: 16px 36px;
+  padding: 8px 24px;
   border-radius: 100px;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   border: 1px solid rgba(255,255,255,0.6);
   box-shadow: 0 4px 16px rgba(249,115,22,0.3);
   text-align: center; /* Add explicit internal center */
 }
-.solution-text strong { color: #fff; font-size: 1.25rem; }
+.solution-text strong { color: #fff; font-size: 1.1rem; }
 
 /* ===== REASONS SECTION ===== */
 .reasons-section {
