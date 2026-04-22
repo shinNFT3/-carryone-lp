@@ -924,7 +924,9 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   min-height: 140px;
 }
 .service-card:hover {
@@ -935,14 +937,14 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: 0;
   right: 0;
-  width: 55%;
+  width: 35%;
   height: 100%;
   object-fit: cover;
   margin: 0;
   border-radius: 0;
   z-index: 0;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 40%);
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 40%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%);
   pointer-events: none;
 }
 .service-card h3 {
@@ -952,7 +954,7 @@ img { max-width: 100%; display: block; }
   font-weight: 900;
   color: var(--gray-800);
   margin-bottom: 8px;
-  width: 60%;
+  width: 70%;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 .service-card p {
@@ -961,7 +963,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.85rem;
   color: var(--gray-600);
   line-height: 1.6;
-  width: 65%;
+  width: 75%;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 
