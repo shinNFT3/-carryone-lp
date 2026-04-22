@@ -1507,8 +1507,12 @@ img { max-width: 100%; display: block; }
   background: var(--gray-100);
 }
 .section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-bottom: 40px;
+  width: 100%;
 }
 .company-grid {
   display: grid;
@@ -1609,6 +1613,13 @@ img { max-width: 100%; display: block; }
   .company-info-box, .company-map-box { padding: 24px 20px; }
   .company-table th { width: 40%; font-size: 0.82rem; }
   .company-table td { font-size: 0.85rem; }
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 /* ===== FOOTER ===== */
