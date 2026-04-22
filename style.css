@@ -1522,7 +1522,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== COMPANY SECTION ===== */
 .company-section {
-  padding: 80px 0 60px;
+  padding: 50px 0 40px;
   background: var(--gray-100);
 }
 .section-header {
@@ -1530,7 +1530,7 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   width: 100%;
 }
 .company-grid {
@@ -1633,11 +1633,12 @@ img { max-width: 100%; display: block; }
   .company-table th { width: 40%; font-size: 0.82rem; }
   .company-table td { font-size: 0.85rem; }
   .section-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 16px !important;
   }
 }
 
