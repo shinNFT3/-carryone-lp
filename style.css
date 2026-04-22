@@ -75,13 +75,12 @@ img { max-width: 100%; display: block; }
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid var(--orange);
-  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }
 /* Sticky header is now always visible */
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 6px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -274,8 +273,8 @@ img { max-width: 100%; display: block; }
 
 /* Mobile Header Adjustment */
 @media (max-width: 600px) {
-  .header-inner { padding: 10px 16px; gap: 8px; }
-  .logo-carry, .logo-one { font-size: 1.25rem; }
+  .header-inner { padding: 4px 16px; gap: 8px; }
+  .logo-carry, .logo-one { font-size: 1rem; }
   .logo-sub { display: none; }
   .call-info { display: none; } 
   .btn-call-header { padding: 8px; border-radius: 50%; } 
@@ -290,7 +289,14 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 40px;
+}
+.nowrap-on-mobile {
+  display: inline-block;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .nowrap-on-mobile { font-size: 0.82rem; letter-spacing: -0.02em; }
 }
 .hero-bg {
   position: absolute;
@@ -477,6 +483,7 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-cta-main {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -496,8 +503,18 @@ img { max-width: 100%; display: block; }
   max-width: 420px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
-.btn-cta-main div { text-align: center; }
-.btn-cta-main svg { width: 24px; height: 24px; flex-shrink: 0; }
+.btn-cta-main div { 
+  flex: 1;
+  text-align: center;
+  margin-left: -24px; /* Compensate for icon width to achieve dead center text */
+}
+.btn-cta-main svg { 
+  width: 18px; 
+  height: 18px; 
+  flex-shrink: 0; 
+  position: relative;
+  z-index: 1;
+}
 .btn-cta-main:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 36px rgba(249,115,22,0.6);
@@ -692,6 +709,7 @@ img { max-width: 100%; display: block; }
   font-size: 1.05rem;
   border: 1px solid rgba(255,255,255,0.6);
   box-shadow: 0 4px 16px rgba(249,115,22,0.3);
+  text-align: center; /* Add explicit internal center */
 }
 .solution-text strong { color: #fff; font-size: 1.2rem; }
 
