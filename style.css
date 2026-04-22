@@ -952,19 +952,17 @@ img { max-width: 100%; display: block; }
   z-index: 1;
   font-size: 1.05rem;
   font-weight: 900;
-  color: var(--gray-800);
+  color: var(--gray-900);
   margin-bottom: 8px;
-  width: 70%;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  width: 85%;
 }
 .service-card p {
   position: relative;
   z-index: 1;
   font-size: 0.85rem;
-  color: var(--gray-600);
+  color: var(--gray-800);
   line-height: 1.6;
-  width: 75%;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  width: 85%;
 }
 
 /* ===== FLOW SECTION ===== */
