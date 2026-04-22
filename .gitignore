@@ -1,0 +1,7 @@
+*.zip
+*.py
+.DS_Store
+desktop_screenshot.png
+mobile_screenshot.png
+index_original.html
+menu.html
