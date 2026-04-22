@@ -279,6 +279,9 @@ img { max-width: 100%; display: block; }
   .call-info { display: none; } 
   .btn-call-header { padding: 8px; border-radius: 50%; } 
   .btn-estimate-header { font-size: 0.75rem; padding: 7px 12px; }
+  
+  /* スマホ特有の調整：ヘッダー高さを考慮 */
+  .hero-content { margin-top: 50px; padding-top: 5px; }
 }
 
 /* ===== HERO SECTION ===== */
@@ -286,7 +289,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
   padding-top: 0;
@@ -317,9 +320,9 @@ img { max-width: 100%; display: block; }
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 20px 16px 56px;
+  padding: 10px 16px 56px;
   max-width: 900px;
-  margin: 60px auto 10px; /* Header(approx 40px) + Gap(20px) = 60px */
+  margin: 50px auto 10px; /* PCでのヘッダー高さ+20pxの隙間を確保 */
   width: 100%;
   text-align: center;
   background: transparent;
