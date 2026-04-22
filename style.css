@@ -322,7 +322,7 @@ img { max-width: 100%; display: block; }
   z-index: 1;
   padding: 0 16px 56px;
   max-width: 900px;
-  margin: 38px auto 10px; /* PCでの密着調整 */
+  margin: 52px auto 10px; /* PCでは少し余白を持たせる */
   width: 100%;
   text-align: center;
   background: transparent;
@@ -713,12 +713,12 @@ img { max-width: 100%; display: block; }
   display: inline-block;
   padding: 16px 36px;
   border-radius: 100px;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   border: 1px solid rgba(255,255,255,0.6);
   box-shadow: 0 4px 16px rgba(249,115,22,0.3);
   text-align: center; /* Add explicit internal center */
 }
-.solution-text strong { color: #fff; font-size: 1.45rem; }
+.solution-text strong { color: #fff; font-size: 1.25rem; }
 
 /* ===== REASONS SECTION ===== */
 .reasons-section {
