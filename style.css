@@ -1590,6 +1590,8 @@ img { max-width: 100%; display: block; }
   padding: 12px 28px;
   border-radius: 100px;
   text-decoration: none;
+  text-align: center;
+  line-height: 1.4;
   box-shadow: 0 4px 16px rgba(249,115,22,0.35);
   transition: all 0.3s;
   border: 2px solid #fff;
