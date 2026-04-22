@@ -280,8 +280,8 @@ img { max-width: 100%; display: block; }
   .btn-call-header { padding: 8px; border-radius: 50%; } 
   .btn-estimate-header { font-size: 0.75rem; padding: 7px 12px; }
   
-  /* スマホ特有の調整：ヘッダー高さを考慮 */
-  .hero-content { margin-top: 40px; padding-top: 0; }
+  /* スマホ：ヘッダーにリボンを完全に密着させる */
+  .hero-content { margin-top: 36px; padding-top: 0; }
 }
 
 /* ===== HERO SECTION ===== */
@@ -322,7 +322,7 @@ img { max-width: 100%; display: block; }
   z-index: 1;
   padding: 0 16px 56px;
   max-width: 900px;
-  margin: 40px auto 10px; /* ヘッダー高さ(約40px)に密着させる */
+  margin: 38px auto 10px; /* PCでの密着調整 */
   width: 100%;
   text-align: center;
   background: transparent;
@@ -341,7 +341,7 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   padding: 8px 20px;
   border-radius: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   animation: ribbonPop 0.6s ease-out both;
   box-shadow: 0 4px 20px rgba(220,38,38,0.5);
 }
@@ -366,7 +366,7 @@ img { max-width: 100%; display: block; }
   padding: 8px 24px;
   border-radius: 100px;
   letter-spacing: 0.08em;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.4);
   animation: fadeSlideUp 0.7s 0.2s ease-out both;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
