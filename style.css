@@ -168,18 +168,17 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 14px;
-  height: 38px;
+  padding: 8px 16px;
   border-radius: 100px;
   color: #fff;
   transition: all 0.3s;
   flex-shrink: 0;
-  gap: 6px;
+  gap: 8px;
 }
 .btn-line-header { background: #06C755; }
 .btn-mail-header { background: var(--navy); }
-.btn-line-header svg, .btn-mail-header svg { width: 18px; height: 18px; }
-.btn-text { font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+.btn-line-header svg, .btn-mail-header svg { width: 16px; height: 16px; }
+.btn-text { font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
 .btn-line-header:hover, .btn-mail-header:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
 
