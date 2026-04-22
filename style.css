@@ -80,7 +80,7 @@ img { max-width: 100%; display: block; }
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 6px 20px;
+  padding: 2px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -273,7 +273,7 @@ img { max-width: 100%; display: block; }
 
 /* Mobile Header Adjustment */
 @media (max-width: 600px) {
-  .header-inner { padding: 4px 16px; gap: 8px; }
+  .header-inner { padding: 2px 16px; gap: 8px; }
   .logo-carry, .logo-one { font-size: 1rem; }
   .logo-sub { display: none; }
   .call-info { display: none; } 
@@ -289,14 +289,14 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .nowrap-on-mobile {
   display: inline-block;
   white-space: nowrap;
 }
 @media (max-width: 480px) {
-  .nowrap-on-mobile { font-size: 0.82rem; letter-spacing: -0.02em; }
+  .nowrap-on-mobile { font-size: 0.92rem; letter-spacing: -0.03em; }
 }
 .hero-bg {
   position: absolute;
@@ -526,8 +526,11 @@ img { max-width: 100%; display: block; }
   0%, 100% { box-shadow: 0 6px 28px rgba(249,115,22,0.5); }
   50% { box-shadow: 0 6px 48px rgba(249,115,22,0.9), 0 0 0 8px rgba(249,115,22,0.15); }
 }
-.btn-small-text { display: block; font-size: 0.72rem; font-weight: 500; opacity: 0.9; letter-spacing: 0.04em; }
-.btn-phone-num { display: block; font-size: 1.5rem; font-weight: 900; letter-spacing: 0.06em; line-height: 1; }
+.btn-small-text { display: block; font-size: 0.85rem; font-weight: 500; opacity: 0.9; letter-spacing: 0.04em; }
+.btn-phone-num { display: block; font-size: 1.8rem; font-weight: 900; letter-spacing: 0.06em; line-height: 1.1; margin: 2px 0; }
+@media (max-width: 600px) {
+  .btn-phone-num { font-size: 1.6rem; }
+}
 
 .btn-cta-sub {
   display: inline-flex;
