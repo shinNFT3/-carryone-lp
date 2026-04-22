@@ -1707,7 +1707,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 480px) {
   .hero-headline {
-    font-size: clamp(1rem, 6.3vw, 2rem);
+    font-size: clamp(1.4rem, 7.3vw, 2.4rem);
     letter-spacing: 0;
     white-space: nowrap;
   }
